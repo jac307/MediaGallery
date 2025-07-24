@@ -46,12 +46,28 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-top: 10px;
     }
     .gallery img {
-      width: 30%;
+      flex: 1 1 calc(33.333% - 10px); /* 3 per row with gap */
+      max-width: 100%;
       height: auto;
       object-fit: cover;
       border-radius: 4px;
+    }
+
+    /* Medium screens: 2 per row */
+    @media (max-width: 900px) {
+      .gallery img {
+        flex: 1 1 calc(50% - 10px);
+      }
+    }
+
+    /* Small screens: 1 per row */
+    @media (max-width: 600px) {
+      .gallery img {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
