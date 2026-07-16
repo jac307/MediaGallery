@@ -66,3 +66,17 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+.model-viewer-box {
+  width: 100%;
+  height: 500px;
+  margin: 20px 0;
+  background: #eeeeee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+model-viewer {
+  width: 100%;
+  height: 100%;
+}

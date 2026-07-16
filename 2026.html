@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Student Project Gallery 2026</title>
   <link rel="stylesheet" href="css/gallery-2026.css">
+  <script
+  type="module"
+  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
 </head>
 
 <body>
@@ -17,6 +21,19 @@
   <div class="student">
     <h2>Student 1</h2>
     <img src="sc-25/blender/Alex.png" class="main-image">
+    <!-- 3D viewer -->
+    <div class="model-viewer-box">
+      <model-viewer
+       src="sc-26/models/AnnaMarie.glb"
+       alt="Interactive 3D character by Student 1"
+       camera-controls
+       auto-rotate
+       animation-name="Pose"
+       autoplay
+       shadow-intensity="1"
+       exposure="1">
+     </model-viewer>
+    </div>
     <div class="videos">
       <video controls>
         <source src="sc-25/videos/Alex-1.mp4" type="video/mp4">
