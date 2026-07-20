@@ -67,10 +67,19 @@ h2 {
   }
 }
 
-.model-viewer-box {
-  width: 100%;
-  height: 600px;
+.student-3d-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: calc(100vw - 80px);
   margin: 20px 0 40px 0;
+  align-items: stretch;
+}
+
+.model-viewer-box,
+.reference-image-box {
+  width: 100%;
+  height: 500px;
   background: #eeeeee;
   border-radius: 8px;
   overflow: hidden;
@@ -82,9 +91,21 @@ model-viewer {
   height: 100%;
 }
 
-@media (max-width: 600px) {
-  .model-viewer-box {
-    width: 100%;
+.reference-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Mobile: stack them */
+@media (max-width: 800px) {
+  .student-3d-row {
+    grid-template-columns: 1fr;
+  }
+
+  .model-viewer-box,
+  .reference-image-box {
     height: 400px;
   }
 }

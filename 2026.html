@@ -22,17 +22,25 @@
     <h2>Student 1</h2>
     <!-- Blender image -->
     <img src="sc-26/blender/student-01.png" class="main-image">
-    <!-- 3D viewer -->
-    <div class="model-viewer-box">
-      <model-viewer
-        src="sc-26/models/student-01.glb"
-        alt="Interactive 3D character by Student 1"
+
+    <!-- 3D viewer + Environment Photo -->
+    <div class="student-3d-row">
+      <div class="model-viewer-box">
+        <model-viewer
+        src="sc-26/models/student-1-scene.glb"
+        alt="Interactive 3D scene by Student 1"
         camera-controls
         auto-rotate
         shadow-intensity="1"
-        exposure="0.6">
+        exposure="1">
       </model-viewer>
-     </div>
+    </div>
+    <div class="reference-image-box">
+      <img
+      src="sc-26/environments/student-1-environment.png"
+      alt="Rendered image of Student 1 environment"
+      >
+    </div>
      <!-- Videos -->
     <!-- <div class="videos">
       <video controls>
