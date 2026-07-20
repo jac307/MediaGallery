@@ -10,6 +10,24 @@
   </script>
 </head>
 
+<script>
+  function matchModelViewerHeightToImage() {
+    const rows = document.querySelectorAll(".student-3d-row");
+
+    rows.forEach(row => {
+      const image = row.querySelector(".reference-image-box img");
+      const viewerBox = row.querySelector(".model-viewer-box");
+
+      if (image && viewerBox && window.innerWidth > 600) {
+        viewerBox.style.height = image.offsetHeight + "px";
+      }
+    });
+  }
+
+  window.addEventListener("load", matchModelViewerHeightToImage);
+  window.addEventListener("resize", matchModelViewerHeightToImage);
+</script>
+
 <body>
   <h1 style="color: #722F37;">Arts at McMaster – Teen Summer Intensives - 2026</h1>
   <h1>Animation and Motion Capture</h1>
