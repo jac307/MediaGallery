@@ -79,7 +79,7 @@ h2 {
 .model-viewer-box,
 .reference-image-box {
   width: 100%;
-  height: 400px;
+  height: 300px;
   background: #eeeeee;
   border-radius: 8px;
   overflow: hidden;
@@ -99,13 +99,13 @@ model-viewer {
 }
 
 /* Mobile: stack them */
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .student-3d-row {
     grid-template-columns: 1fr;
   }
 
   .model-viewer-box,
   .reference-image-box {
-    height: 400px;
+    height: 200px;
   }
 }
