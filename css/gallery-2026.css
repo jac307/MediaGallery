@@ -99,7 +99,7 @@ model-viewer {
 }
 
 /* Mobile: stack them */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .student-3d-row {
     grid-template-columns: 1fr;
   }
