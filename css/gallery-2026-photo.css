@@ -31,6 +31,23 @@ h2 {
   margin: 10px 0;
 }
 
+/* GIF strip: 5 GIFs in one row */
+.gif-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 20px 0 30px 0;
+}
+
+.gif-strip img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Single-column video at 80% screen width */
 .video {
   display: grid;
   grid-template-columns: 1fr;
@@ -46,6 +63,7 @@ h2 {
   display: block;
 }
 
+/* Clickable photo gallery grid */
 .gallery {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -56,14 +74,7 @@ h2 {
 .gallery img {
   width: 100%;
   height: auto;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-/* Clickable gallery images */
-.gallery img {
-  width: 100%;
-  height: auto;
+  display: block;
   object-fit: cover;
   border-radius: 4px;
   cursor: pointer;
@@ -75,7 +86,7 @@ h2 {
   opacity: 0.9;
 }
 
-/* Lightbox pop-out */
+/* Lightbox pop-out window */
 .lightbox {
   display: none;
   position: fixed;
@@ -94,6 +105,8 @@ h2 {
 .lightbox-content {
   max-width: 90vw;
   max-height: 85vh;
+  width: auto;
+  height: auto;
   display: block;
   border-radius: 6px;
 }
@@ -101,10 +114,13 @@ h2 {
 .lightbox-caption {
   position: absolute;
   bottom: 20px;
-  color: white;
+  left: 0;
+  width: 100%;
+  color: #ffffff;
   font-size: 1rem;
   text-align: center;
-  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .lightbox-close,
@@ -113,10 +129,11 @@ h2 {
   position: absolute;
   background: none;
   border: none;
-  color: white;
+  color: #ffffff;
   font-size: 2.5rem;
   cursor: pointer;
   padding: 10px;
+  line-height: 1;
 }
 
 .lightbox-close {
@@ -138,13 +155,17 @@ h2 {
   color: #cccccc;
 }
 
-/* Mobile */
+/* Mobile layout */
 @media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
+  body {
+    margin: 20px;
   }
 
   .gif-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
     grid-template-columns: 1fr;
   }
 
@@ -156,6 +177,25 @@ h2 {
     padding: 20px;
   }
 
+  .lightbox-content {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+
+  .lightbox-close {
+    top: 15px;
+    right: 20px;
+  }
+
+  .lightbox-prev {
+    left: 15px;
+  }
+
+  .lightbox-next {
+    right: 15px;
+  }
+
+  .lightbox-close,
   .lightbox-prev,
   .lightbox-next {
     font-size: 2rem;
