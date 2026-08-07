@@ -63,6 +63,12 @@ h2 {
   display: block;
 }
 
+.gallery-instruction {
+  font-size: 0.95rem;
+  color: #555555;
+  margin: -5px 0 12px 0;
+}
+
 /* Clickable photo gallery grid */
 .gallery {
   display: grid;
